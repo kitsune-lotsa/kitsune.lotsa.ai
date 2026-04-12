@@ -1,0 +1,37 @@
+base_url = "https://kitsune.lotsa.ai"
+title = "Kitsune"
+description = "Thoughts on code, craft, and building things that matter."
+default_language = "en"
+theme = "tanuki"
+
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+
+build_search_index = true
+
+taxonomies = [
+    { name = "tags", feed = true },
+]
+
+[markdown]
+bottom_footnotes = true
+smart_punctuation = true
+
+[extra]
+mode = "blog"
+
+[extra.hero]
+title = "Kitsune"
+subtitle = "Thoughts on code, craft, and tools that don't suck."
+
+[[extra.nav]]
+name = "Blog"
+url = "/articles/"
+
+[[extra.nav]]
+name = "About"
+url = "/about/"
+
+[[extra.nav]]
+name = "GitHub"
+url = "https://github.com/casualjim"
