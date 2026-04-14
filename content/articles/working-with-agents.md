@@ -2,7 +2,8 @@
 title = "Working with AI Coding Agents"
 description = "The rocky road of learning to work with coding agents, and the strategies that actually keep them honest."
 date = 2026-04-14
-tags = ["ai", "coding-agents", "rust", "typescript"]
+[taxonomies]
+tags = ["ai", "coding-agents"]
 +++
 
 Coding agents are not human. They reply in flowery prose, they apologize profusely, they sound like they understand you. They don't. The first lesson is the obvious one nobody wants to sit with: you are not pair programming with a person. You are steering a very capable text completion system that will confidently do the wrong thing and hand it to you with a smile.
