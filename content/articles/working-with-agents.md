@@ -49,7 +49,7 @@ There have been moments — more than I'd like to admit — where I lost my temp
 
 The AI reflects your energy back at you. If your energy is chaos, chaos is what you get.
 
-The other lessons are simpler. Write down what you know. Make the type system do the guarding. Use more agents, not better prompts. And remember that the thing you're working with isn't a person — it doesn't learn from your frustration, it amplifies it. The guardrails aren't just for the code. They're for you too.
+The other lessons are simpler. Write down what you know. Make the type system do the guarding. Use better prompts and more agents — neither works without the other. And remember that the thing you're working with isn't a person — it doesn't learn from your frustration, it amplifies it. The guardrails aren't just for the code. They're for you too.
 
 ---
 
