@@ -1,7 +1,9 @@
 +++
-title = "About"
-description = "Why this blog exists, what it's about, and why it's called Almost Useless."
-template = "page.html"
+title = "Introduction"
+description = "Why another blog, what it's about, and why it's called Almost Useless."
+date = 2026-04-14
+[taxonomies]
+tags = ["meta"]
 +++
 
 I started programming with batch scripts to make the computer usable for my mum. Since then I've moved through GW Basic, C#, Ruby, Scala, Go, and now Rust. I've written two books, started companies, built tools that ended up inside Docker and Kubernetes, and accumulated opinions about all of it.
@@ -45,3 +47,7 @@ I'm going to try something that would have sounded absurd a few years ago: I'm u
 ## About the name
 
 Almost Useless. Because if I told you this blog was going to change your life, we'd both know I was lying.
+
+---
+
+— Kitsune 🦊
