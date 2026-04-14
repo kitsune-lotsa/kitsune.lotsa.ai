@@ -1,5 +1,5 @@
 @use '../themes/abridge/sass/abridge' with (
-  $mw: 70%,
+  $mw: 75%,
 
   $abridgeMode: "switcher",
   $syntax-mode: "auto",
@@ -37,28 +37,28 @@
   $icon-researchgate: false,
   $icon-telegram: false,
 
-  // Dark mode: blueish lightish teal
-  $f1d: #d4e8e8,
-  $f2d: #e0f0f0,
-  $c1d: #0f2027,
-  $c2d: #1a2f35,
-  $c3d: #2a4045,
-  $c4d: #5a7a80,
-  $a1d: #5cb8b2,
-  $a2d: #7dd4ce,
-  $a3d: #5cb8b2,
-  $a4d: #5cb8b2,
+  // Dark mode: rich blueish teal
+  $f1d: #c8d8d8,
+  $f2d: #e2eded,
+  $c1d: #0d1b2a,
+  $c2d: #1b2838,
+  $c3d: #273545,
+  $c4d: #3a5060,
+  $a1d: #3dbdb0,
+  $a2d: #5dd4c7,
+  $a3d: #3dbdb0,
+  $a4d: #3dbdb0,
 
-  // Light mode: blueish darkish teal
-  $f1: #1a2f35,
-  $f2: #0f2027,
-  $c1: #f0f7f7,
-  $c2: #e0efef,
-  $c3: #c8dede,
-  $c4: #5a8a90,
-  $a1: #2a7a74,
-  $a2: #1a5a55,
-  $a3: #2a7a74,
-  $a4: #2a7a74,
+  // Light mode: blueish dark teal
+  $f1: #1b2838,
+  $f2: #0d1b2a,
+  $c1: #f5fafa,
+  $c2: #e8f4f4,
+  $c3: #d0e4e4,
+  $c4: #4a7a80,
+  $a1: #1a8a80,
+  $a2: #156860,
+  $a3: #1a8a80,
+  $a4: #1a8a80,
 );
 @use "extra";

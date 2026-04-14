@@ -10,6 +10,8 @@ I started programming with batch scripts to make the computer usable for my mum.
 
 This is a place to put those opinions before they evaporate.
 
+<!-- more -->
+
 ## Why write
 
 Writing is how I think. I've known this for a long time but I've been bad at doing it consistently — notes in gists, thoughts in READMEs, one-liners on Twitter. At some point I stopped entirely, not because I had nothing to say but because I'd lost the habit of saying it. Turns out when you spend your days building systems for other people, you start to lose track of what you actually think about things until you sit down and try to put it into words. The words weren't there because I hadn't been using them.
