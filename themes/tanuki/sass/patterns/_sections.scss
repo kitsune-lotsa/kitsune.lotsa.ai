@@ -195,7 +195,7 @@
 /// Prose content (articles, docs)
 @mixin prose {
   font-size: var(--text-md);
-  line-height: var(--leading-loose);
+  line-height: var(--leading-relaxed);
   color: var(--color-text);
 
   @media screen and (min-width: 800px) {
