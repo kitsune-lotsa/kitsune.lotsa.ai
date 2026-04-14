@@ -48,4 +48,4 @@ Almost Useless. Because if I told you this blog was going to change your life, w
 
 ---
 
-*On to the actual writing.*
+*— Kitsune 🦊*
