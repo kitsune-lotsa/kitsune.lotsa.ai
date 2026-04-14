@@ -17,9 +17,13 @@ That's been the rocky part. Not the tech — the friction of taking what lives i
 
 ## More agents
 
-The answer to problems with AI agents is more AI agents. Not better prompts, not a nicer system prompt, not pleading. You split them into roles — a coder, a reviewer — and you give the reviewer different instructions than the coder. The coder writes. The reviewer checks. The coder rewrites. You keep adding reviewers until the output stops making you wince.
+Better prompts matter. The right context matters. Anyone who tells you otherwise is selling something. But better prompts don't scale — you can't hand-craft the perfect instruction for every situation, and even if you could, the agent would still find a way to misinterpret it at 3am when you're not watching.
 
-The pattern that's emerging is inner and outer loops. The inner loop is the coder and reviewer going back and forth on a single task. The outer loop is the supervisor — another agent, or you — stepping in when the inner loop gets stuck or starts lying to itself.
+The answer to autonomy is more AI agents. Not nicer system prompts, not pleading. You split them into roles — a coder, a reviewer — and you give the reviewer different instructions than the coder. The coder writes. The reviewer checks. The coder rewrites. You keep adding reviewers until the output stops making you wince.
+
+The pattern that's emerging is inner and outer loops. The inner loop is the coder and reviewer going back and forth on a single task. The outer loop is the supervisor — another agent, or you — stepping in when the inner loop gets stuck or starts lying to itself. And even the prompts themselves get the agent treatment — you write a lazy half-baked thought, and another agent turns it into something the coder can actually work with.
+
+The goal is autonomy. Less babysitting. Less reviewing every line. Guardrails that let you walk away and come back to something that doesn't make you wince.
 
 ## Keeping them honest
 
@@ -31,11 +35,21 @@ TypeScript with JSDoc type annotations works too. Branded types for domain bound
 
 Then there's the reviewer agent whose entire job is to tell the coder to go back and actually follow the rules. This part really pissed me off — because without it, the agents will just say "fuck it! We'll do it live!" and ship whatever they have. You need someone — something — in the loop that refuses to merge until the rules are actually followed, not just acknowledged.
 
-## Secrets
+## The secrets
 
 Agents will read your environment variables. They will read your Kubernetes secrets. They will bake credentials into a config file and hand you a pull request with a straight face.
 
 This is an ongoing challenge. Right now: sops with mise and an age key. Exploring bitwarden secrets with fknox, and looking at deploying openbao. The goal is to make secrets available to the runtime but invisible to the agent that's writing the code. There's no clean solution yet. The best you can do is make it harder for them to stumble into something they shouldn't see.
+
+## Closing words
+
+The biggest lesson hasn't been technical. It's that I've been my own worst enemy.
+
+There have been moments — more than I'd like to admit — where I lost my temper at the AI. The outcome was always worse. Not for the AI. For me, and for the codebase. The AI doesn't respond to anger by doing better. It enters what I've come to call scared bunny mode — over-apologizing, frantically cleaning up everything at once, and in that panicked state creating the most unrecoverable problems I've seen. A calm, precise correction produces a calm, precise fix. A rage-filled rant produces a cascade of well-intentioned destruction. I've broken keyboards over this. The codebase needed even more fixing after the AI's cleanup pass than it did before I yelled at it.
+
+The AI reflects your energy back at you. If your energy is chaos, chaos is what you get.
+
+The other lessons are simpler. Write down what you know. Make the type system do the guarding. Use more agents, not better prompts. And remember that the thing you're working with isn't a person — it doesn't learn from your frustration, it amplifies it. The guardrails aren't just for the code. They're for you too.
 
 ---
 
