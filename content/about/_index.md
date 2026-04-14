@@ -5,16 +5,6 @@ template = "about.html"
 sort_by = "none"
 +++
 
-I started programming with batch scripts to make the computer usable for my mum. Since then I've moved through GW Basic, C#, Ruby, Scala, Go, and now Rust. I've written two books, started companies, built tools that ended up inside Docker and Kubernetes, and accumulated opinions about all of it.
-
-This is a place to put those opinions before they evaporate.
-
-## Why write
-
-Writing is how I think. I've known this for a long time but I've been bad at doing it consistently — notes in gists, thoughts in READMEs, one-liners on Twitter. At some point I stopped entirely, not because I had nothing to say but because I'd lost the habit of saying it. Turns out when you spend your days building systems for other people, you start to lose track of what you actually think about things until you sit down and try to put it into words. The words weren't there because I hadn't been using them.
-
-So this is mostly selfish. If someone else gets something out of it, that's a pleasant accident.
-
 ## What this is
 
 Not tutorials — the internet has enough, most of them wrong. Not thinkpieces about leadership or engineering culture. Not a résumé in blog form.
