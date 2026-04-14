@@ -44,6 +44,8 @@ I'm going to try something that would have sounded absurd a few years ago: I'm u
 
 ## About the name
 
-Almost Useless.
+Almost Useless. Because if I told you this blog was going to change your life, we'd both know I was lying.
 
-Hopefully a pleasant surprise.
+---
+
+*On to the actual writing.*
