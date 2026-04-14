@@ -19,58 +19,55 @@
 {% block content %}
 {% if mode == "site" or mode == "blog" %}
 {# raskell.io style article page #}
-<div class="container">
-    <article>
-        <header class="article-header">
-            <div class="thumb">
-                <div>
-                    <h1>{{ page.title }}</h1>
-                    <div class="post-meta">
-                        <div class="meta-line">
-                            {% if config.extra.author.name or page.extra.author %}
-                            <span class="author">{{ page.extra.author | default(value=config.extra.author.name) }}</span>
-                            {% endif %}
-                            {% if page.date %}
-                            {% if config.extra.author.name or page.extra.author %}<span class="separator">·</span>{% endif %}
-                            <time>{{ page.date | date(format="%B %d, %Y") }}</time>
-                            {% endif %}
-                            {% if page.reading_time %}
-                            {% if page.date or config.extra.author.name or page.extra.author %}<span class="separator">·</span>{% endif %}
-                            <span class="reading-time">{{ page.reading_time }} min read</span>
-                            {% endif %}
+<article>
+    <header class="article-header">
+        <div class="thumb">
+            <div>
+                <h1>{{ page.title }}</h1>
+                <div class="post-meta">
+                    <div class="meta-line">
+                        {% if config.extra.author.name or page.extra.author %}
+                        <span class="author">{{ page.extra.author | default(value=config.extra.author.name) }}</span>
+                        {% endif %}
+                        {% if page.date %}
+                        {% if config.extra.author.name or page.extra.author %}<span class="separator">·</span>{% endif %}
+                        <time>{{ page.date | date(format="%B %d, %Y") }}</time>
+                        {% endif %}
+                        {% if page.reading_time %}
+                        {% if page.date or config.extra.author.name or page.extra.author %}<span class="separator">·</span>{% endif %}
+                        <span class="reading-time">{{ page.reading_time }} min read</span>
+                        {% endif %}
+                    </div>
+                    {% if page.taxonomies.tags or page.taxonomies.series %}
+                    <div class="article-taxonomies">
+                        {% if page.taxonomies.tags %}
+                        <div class="tags">
+                            {% for tag in page.taxonomies.tags %}
+                            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+                            {% endfor %}
                         </div>
-                        {% if page.taxonomies.tags or page.taxonomies.series %}
-                        <div class="article-taxonomies">
-                            {% if page.taxonomies.tags %}
-                            <div class="tags">
-                                {% for tag in page.taxonomies.tags %}
-                                <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-                            {% if page.taxonomies.series %}
-                            <div class="series-badge">
-                                Series: <a href="{{ get_taxonomy_url(kind='series', name=page.taxonomies.series[0]) }}">{{ page.taxonomies.series[0] }}</a>
-                            </div>
-                            {% endif %}
+                        {% endif %}
+                        {% if page.taxonomies.series %}
+                        <div class="series-badge">
+                            Series: <a href="{{ get_taxonomy_url(kind='series', name=page.taxonomies.series[0]) }}">{{ page.taxonomies.series[0] }}</a>
                         </div>
                         {% endif %}
                     </div>
+                    {% endif %}
                 </div>
             </div>
-            {% if page.extra.image %}
-            <img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="post-thumbnail" loading="lazy" decoding="async">
-            {% endif %}
-        </header>
-    </article>
+        </div>
+        {% if page.extra.image %}
+        <img src="/{{ page.extra.image }}" alt="{{ page.title }}" class="post-thumbnail" loading="lazy" decoding="async">
+        {% endif %}
+    </header>
+</article>
 
-    <div class="article-post">
-        {{ page.content | safe }}
-    </div>
+<div class="article-post">
+    {{ page.content | safe }}
 </div>
 
-<div class="container">
-    <nav class="flex container suggested">
+<nav class="suggested">
         {% if page.lower %}
         <a rel="prev" href="{{ page.lower.permalink }}" title="Previous post (older)">
             <span>← Previous</span>
@@ -85,7 +82,6 @@
         </a>
         {% endif %}
     </nav>
-</div>
 
 {% else %}
 {# Original tanuki page layout for docs/book/product modes #}
