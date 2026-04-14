@@ -403,12 +403,45 @@
   // =============================================================================
 
   function initMobileMenu() {
+    // Docs/product mode: .menu-toggle + #nav-overlay
     const menuToggle = document.querySelector('.menu-toggle');
     const navOverlay = document.getElementById('nav-overlay');
     const closeBtn = document.querySelector('.nav-overlay__close');
     const backdrop = document.querySelector('.nav-overlay__backdrop');
 
-    if (!menuToggle || !navOverlay) return;
+    // Blog/site mode: #mobile-menu-button + #mobile-menu-overlay
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    if (!menuToggle || !navOverlay) {
+      // No docs nav found, try blog mobile menu
+      if (!mobileMenuBtn || !mobileMenuOverlay) return;
+
+      function openBlogMenu() {
+        mobileMenuOverlay.classList.add('active');
+        mobileMenuOverlay.setAttribute('aria-hidden', 'false');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeBlogMenu() {
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenuOverlay.setAttribute('aria-hidden', 'true');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeBlogMenu() : openBlogMenu();
+      });
+
+      mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeBlogMenu);
+      });
+
+      return;
+    }
 
     function openNavOverlay() {
       navOverlay.setAttribute('aria-hidden', 'false');
