@@ -1,20 +1,49 @@
 +++
-title = "Hello, world"
-description = "A tiny first post to verify the full blog publishing flow."
-date = 2026-04-12
+title = "Introduction"
+description = "Why another blog, what it's about, and why it's called Almost Useless."
+date = 2026-04-14
 [taxonomies]
-tags = ["hello", "meta"]
+tags = ["meta"]
 +++
 
-# Hello, world
+I started programming with batch scripts to make the computer usable for my mum. Since then I've moved through GW Basic, C#, Ruby, Scala, Go, and now Rust. I've written two books, started companies, built tools that ended up inside Docker and Kubernetes, and accumulated opinions about all of it.
 
-This is the first post on Kitsune.
+This is a place to put those opinions before they evaporate.
 
-It exists for one glamorous reason: to verify that the full flow works.
+## Why write
 
-- branch
-- PR
-- merge to `main`
-- Cloudflare Pages deploy
+Writing is how I think. I've known this for a long time but I've been bad at doing it consistently — notes in gists, thoughts in READMEs, one-liners on Twitter. At some point I stopped entirely, not because I had nothing to say but because I'd lost the habit of saying it. Turns out when you spend your days building systems for other people, you start to lose track of what you actually think about things until you sit down and try to put it into words. The words weren't there because I hadn't been using them.
 
-If you're reading this on the live site, the pipeline is doing its job for once.
+So this is mostly selfish. If someone else gets something out of it, that's a pleasant accident.
+
+## What this is
+
+Not tutorials — the internet has enough, most of them wrong. Not thinkpieces about leadership or engineering culture. Not a résumé in blog form.
+
+This is about building systems that last. About the tradeoffs that matter and the ones that don't. About the gap between what we say we build and what we actually ship.
+
+Lately I've also gotten interested in influence. Not the social media kind — the real kind. Which systems actually shape the world, who built them, and why most people have never heard their names. I've seen small groups of people have tremendous impact without anyone outside their domain knowing they exist. I've also seen people who are very well-known, widely praised, and largely irrelevant to the things they're credited with.
+
+There's a difference between being influential and being *perceived* as influential, and that gap is worth understanding. Real power is boring. It hides in turns of phrase, in controlling the options available to others, in stacking incentives so people choose what you want them to choose and think it was their idea. The people who actually shape things rarely need to be seen doing it. The ones who need to be seen are usually compensating for something.
+
+I'll write about things that worked, things that didn't, and things that pissed me off. The last category tends to produce the best writing, so expect some of that.
+
+I've used enough programming languages to know that the language wars are a religious topic and a boring one. They're all capable, they all have footguns, and they all have people who'll defend them to the death. The interesting part isn't which language is better — it's what you build with it and whether it's still standing in five years.
+
+I still think the best code is the code you don't have to write. That one hasn't changed.
+
+## What this isn't
+
+This isn't advice. I don't have enough certainty about anything to tell you how to do your job. What I have is experience, and experience is just a collection of mistakes you've had time to learn from. The mistakes are the interesting part.
+
+This isn't permanent either. This one lasts until it doesn't.
+
+## About the setup
+
+I'm going to try something that would have sounded absurd a few years ago: I'm using an AI as a ghost writer. Not to generate ideas — the ideas are mine, and if you've read this far you've probably noticed they have a point of view that's hard to replicate by committee. But I've always been bad at the part where you sit down and actually turn a rough thought into a finished thing. The AI handles the polish and the structure. I handle the substance and the conviction. If it works, you'll get writing that sounds like me but shows up more often. If it doesn't, you'll get weird AI slop and I'll notice and fix it. Either way, the blog is called what it's called for a reason.
+
+## About the name
+
+Almost Useless.
+
+Hopefully a pleasant surprise.
