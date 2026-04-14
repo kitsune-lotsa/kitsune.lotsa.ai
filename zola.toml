@@ -1,6 +1,6 @@
 base_url = "https://kitsune.lotsa.ai"
-title = "Kitsune"
-description = "Thoughts on code, craft, and building things that matter."
+title = "Almost Useless"
+description = "Opinions, experiments, and systems thinking. Most of it will fail. Some might be mildly useful."
 default_language = "en"
 theme = "tanuki"
 
@@ -21,8 +21,8 @@ smart_punctuation = true
 mode = "blog"
 
 [extra.hero]
-title = "Kitsune"
-subtitle = "Thoughts on code, craft, and tools that don't suck."
+title = "Almost Useless"
+subtitle = "Opinions, experiments, and systems thinking. Most of it will fail. Some might be mildly useful."
 
 [[extra.nav]]
 name = "Blog"
