@@ -22,6 +22,8 @@ Not tutorials — the internet has enough, most of them wrong. Not thinkpieces a
 
 This is about building systems that last. About the tradeoffs that matter and the ones that don't. About the gap between what we say we build and what we actually ship.
 
+It's also about experiments. Most of them will fail. A few might be mildly useful — the blog is called what it's called for a reason. But the experiments are the point, not the success rate. You learn more from the thing that didn't work than from the thing that did, as long as you're paying attention.
+
 Lately I've also gotten interested in influence. Not the social media kind — the real kind. Which systems actually shape the world, who built them, and why most people have never heard their names. I've seen small groups of people have tremendous impact without anyone outside their domain knowing they exist. I've also seen people who are very well-known, widely praised, and largely irrelevant to the things they're credited with.
 
 There's a difference between being influential and being *perceived* as influential, and that gap is worth understanding. Real power is boring. It hides in turns of phrase, in controlling the options available to others, in stacking incentives so people choose what you want them to choose and think it was their idea. The people who actually shape things rarely need to be seen doing it. The ones who need to be seen are usually compensating for something.
