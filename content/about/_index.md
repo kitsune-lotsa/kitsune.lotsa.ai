@@ -1,7 +1,6 @@
 +++
 title = "About"
 description = "Why this blog exists, what it's about, and why it's called Almost Useless."
-template = "about.html"
 sort_by = "none"
 +++
 

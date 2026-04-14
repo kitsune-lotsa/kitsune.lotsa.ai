@@ -2,36 +2,98 @@ base_url = "https://kitsune.lotsa.ai"
 title = "Almost Useless"
 description = "Opinions, experiments, and systems thinking. Most of it will fail. Some might be mildly useful."
 default_language = "en"
-theme = "tanuki"
+compile_sass = true
+minify_html = false
+theme = "abridge"
 
 generate_feeds = true
-feed_filenames = ["atom.xml", "rss.xml"]
-
+feed_filenames = ["atom.xml"]
 build_search_index = true
 
 taxonomies = [
     { name = "tags", feed = true },
 ]
 
+[search]
+index_format = "elasticlunr_json"
+include_title = true
+include_description = true
+include_content = true
+
 [markdown]
 bottom_footnotes = true
 smart_punctuation = true
+external_links_target_blank = true
+highlighting = { theme = "dracula" }
 
 [extra]
-mode = "blog"
+menu = [
+    {url = "blog", name = "Blog", slash = true, blank = false, size="s110"},
+    {url = "about", name = "About", slash = true, blank = false, size="s110"},
+    {url = "tags", name = "Tags", slash = true, blank = false, size="s110"},
+]
+menu_footer = [
+    {url = "https://github.com/casualjim", name = "GitHub", slash = false, blank = true, size="s90"},
+    {url = "sitemap.xml", name = "Sitemap", slash = false, blank = true, size="s90"},
+]
 
-[extra.hero]
-title = "Almost Useless"
-subtitle = "Opinions, experiments, and systems thinking. Most of it will fail. Some might be mildly useful."
+toc = true
+recent = true
+recent_items = 15
+series = true
+series_items = 9
 
-[[extra.nav]]
-name = "Blog"
-url = "/articles/"
+meta_index = { position="bottom", size="s90", author=false, readtime=false, readstring="min", date=true, updated=false, categories_tags=true, divider="" }
+meta_post = { position="top", size="s95", author=true, readtime=false, readstring="min read", date=true, updated=true, categories_tags=true, divider="" }
 
-[[extra.nav]]
-name = "About"
-url = "/about/"
+title_size_index = "s85"
+footer_size = "s80"
+footer_credit = true
 
-[[extra.nav]]
-name = "GitHub"
-url = "https://github.com/casualjim"
+textlogo = "Almost Useless"
+sitedesc = false
+headhr = false
+foothr = false
+
+title_separator = "|"
+title_addition = ""
+author = "Ivan Porto Carrero"
+keywords = "blog, systems thinking, software engineering, AI, coding agents"
+seo = true
+
+feed = true
+github = "casualjim"
+
+uglyurls = false
+integrity = true
+js_bundle = true
+js_copycode = true
+js_email_encode = false
+js_prestyle = true
+js_switcher = true
+js_switcher_default = "dark"
+
+search_library = "elasticlunr"
+stylesheets = ["abridge.css"]
+
+webmanifest = "manifest.min.json"
+
+pwa = true
+pwa_VER = '1.0.0'
+pwa_NORM_TTL = 0
+pwa_LONG_TTL = 0
+pwa_TTL_NORM = '"sw.min.js", "sw_load.min.js"'
+pwa_TTL_LONG = '"jpg", "jpeg", "png", "gif", "webp", "avif", "ico", "svg", "xsl", "txt"'
+pwa_TTL_EXEMPT = '"js", "css", "otf", "eot", "ttf", "woff", "woff2", "mp4", "webm", "mp3", "ogg"'
+pwa_cache_all = true
+pwa_BASE_CACHE_FILES = "'/js/theme.min.js','/js/theme_light.min.js','/abridge.css','/js/abridge.min.js','/','/404.html','/offline/','/manifest.min.json'"
+pwa_IGNORE_FILES = ["_headers","sw.min.js","sw.js"]
+
+favicon_theme_color = "#1a3a3a"
+favicon_ms_color = "#1a3a3a"
+favicon_mask = "safari-pinned-tab.svg"
+favicon_mask_color = "#5cb8b2"
+favicon_svg = "favicon.svg"
+favicon180 = "apple-touch-icon.png"
+favicon32 = "favicon-32x32.png"
+favicon16 = "favicon-16x16.png"
