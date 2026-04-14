@@ -1,7 +1,8 @@
 +++
 title = "About"
 description = "Why this blog exists, what it's about, and why it's called Almost Useless."
-template = "page.html"
+template = "about.html"
+sort_by = "none"
 +++
 
 I started programming with batch scripts to make the computer usable for my mum. Since then I've moved through GW Basic, C#, Ruby, Scala, Go, and now Rust. I've written two books, started companies, built tools that ended up inside Docker and Kubernetes, and accumulated opinions about all of it.
