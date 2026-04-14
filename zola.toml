@@ -28,12 +28,12 @@ highlighting = { theme = "dracula" }
 
 [extra]
 menu = [
-    {url = "blog", name = "Blog", slash = true, blank = false, size="s110"},
+    {url = "", name = "Blog", slash = true, blank = false, size="s110"},
     {url = "about", name = "About", slash = true, blank = false, size="s110"},
     {url = "tags", name = "Tags", slash = true, blank = false, size="s110"},
 ]
 menu_footer = [
-    {url = "https://github.com/casualjim", name = "GitHub", slash = false, blank = true, size="s90"},
+    {url = "https://github.com/kitsune-lotsa/kitsune.lotsa.ai", name = "GitHub", slash = false, blank = true, size="s90"},
     {url = "sitemap.xml", name = "Sitemap", slash = false, blank = true, size="s90"},
 ]
 
@@ -62,7 +62,7 @@ keywords = "blog, systems thinking, software engineering, AI, coding agents"
 seo = true
 
 feed = true
-github = "casualjim"
+github = "kitsune-lotsa/kitsune.lotsa.ai"
 
 uglyurls = false
 integrity = true

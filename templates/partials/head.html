@@ -8,7 +8,7 @@
   {%- if config.extra.js_switcher_default %}
     {%- if config.extra.js_switcher_default == "light" %}{% set js_theme="js/theme_light.min.js" %}{% endif %}
   {%- endif %}
-  <script src="{{ js_theme | safe }}"{%- if integrity %} integrity="sha384-{{ get_hash(path=js_theme, sha_type=384, base64=true) | safe }}"{%- endif %}></script>
+  <script src="{{ "/" ~ js_theme | safe }}"{%- if integrity %} integrity="sha384-{{ get_hash(path=js_theme, sha_type=384, base64=true) | safe }}"{%- endif %}></script>
   {%- endif %}
 
 
@@ -18,12 +18,12 @@
 {#- Style Sheets #}
   {%- set stylesheets=config.extra.stylesheets | default(value=[ "abridge.css" ]) -%}
   {%- if stylesheets %}{%- for i in stylesheets %}
-  <link rel="stylesheet" href="{{ i | safe }}" />
+  <link rel="stylesheet" href="{{ "/" ~ i | safe }}" />
   {%- endfor %}{%- endif %}
 
   {%- if page.extra.stylesheets %}{%- set pagestylesheets=page.extra.stylesheets -%}{%- endif %}
   {%- if pagestylesheets %}{%- for i in pagestylesheets %}
-  <link rel="stylesheet" href="{{ i | safe }}" />
+  <link rel="stylesheet" href="{{ "/" ~ i | safe }}" />
   {%- endfor %}{%- endif %}
 
 
