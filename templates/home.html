@@ -1,0 +1,87 @@
+{%- extends "base.html" %}
+{%- import "macros/macros.html" as macros %}
+
+{%- block seo %}
+  {{- super() }}
+  {%- if config.title %}
+    {%- set title = config.title %}
+  {%- else %}
+    {%- set title = "" %}
+  {%- endif %}
+  {%- if config.extra.title_addition and title %}
+    {%- set title_addition = " " ~ config.extra.title_separator ~ " " ~ config.extra.title_addition %}
+  {%- elif config.extra.title_addition %}
+    {%- set title_addition = config.extra.title_addition %}
+  {%- else %}
+    {%- set title_addition = "" %}
+  {%- endif %}
+  {%- set description = config.description %}
+  {{- macros_seo::seo(config=config, title=title, title_addition=title_addition, description=description, is_home=true) }}
+{%- endblock seo %}
+
+{%- block content %}
+  {%- set blog = get_section(path="blog/_index.md") %}
+
+  <div>
+    {%- if section.content %}
+    <div class="sum">{{ section.content | safe }}</div>
+    {%- endif %}
+
+    {%- if config.build_search_index %}
+    <div>
+      <form autocomplete=off class="js" name="goSearch" id="searchbox">
+        <div class="searchd">
+          <input id="searchinput" type="text" placeholder="Search" title="Search" />
+          <button type="submit" title="Search" class="si">&#8981;</button>
+        </div>
+        <div class="results"><div id="suggestions"></div></div>
+      </form>
+    </div>
+    {%- endif %}
+
+    <h2 class="tpad">Writing</h2>
+
+    {%- for page in blog.pages %}
+    <article>
+      {{- macros::title_index(page=page, config=config) }}
+      {%- if config.extra.meta_index.position %}
+      {%- if config.extra.meta_index.position == "top" or config.extra.meta_index.position == "both" %}
+      {{- macros::meta_index(page=page, config=config) }}
+      {%- endif %}{%- endif %}
+      <div class="sum">
+        <p>
+        {%- if page.summary %}
+          {{ page.summary | markdown(inline=true) | safe }}
+        {%- elif page.description %}
+          {{ page.description | markdown(inline=true) | safe }}
+        {%- elif page.content %}
+          {{ page.content | striptags | truncate(length=150) | markdown(inline=true) | safe }}
+        {%- endif %}
+          <a href="{{ page.permalink | safe }}">
+            ...{{ macros::translate(key="more", default="more", i18n=i18n) }}
+          </a>
+        </p>
+      </div>
+      {%- if config.extra.meta_index.position %}
+      {%- if config.extra.meta_index.position == "bottom" or config.extra.meta_index.position == "both" %}
+      {{- macros::meta_index(page=page, config=config) }}
+      {%- endif %}
+      {%- endif %}
+    </article>
+    {%- endfor %}
+
+    <p class="tpad"><a href="/blog/">View all blog →</a></p>
+  </div>
+
+  {%- if config.extra.recent | default(value=true) %}
+  <div class="sblock">
+    <div class="blockdiv sticky">
+      <span class="b s150">{{ macros::translate(key="Recent", default="Recent", i18n=i18n) }}</span>
+      {%- set recent_items=config.extra.recent_items | default(value=9) -%}
+      {%- for page in blog.pages | slice(end=recent_items) %}
+        {{- macros::page_listing(page=page, config=config) }}
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endif %}
+{%- endblock content %}

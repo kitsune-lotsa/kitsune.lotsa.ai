@@ -2,7 +2,7 @@
 title = "Almost Useless"
 description = "Opinions, experiments, and systems thinking. Most of it will fail. Some might be mildly useful."
 sort_by = "date"
-template = "index.html"
+template = "home.html"
 +++
 
 A blog about building systems that last, influence that's real, and experiments that mostly fail but occasionally teach you something.
