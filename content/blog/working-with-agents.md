@@ -16,8 +16,6 @@ Coding agents need it written down. Every bit of it. And they need you to keep t
 
 That's been the rocky part. Not the tech — the friction of taking what lives in the back of your head and making it explicit enough that a non-thinking system can follow it, then building the guardrails to make sure it actually does. Most of the rough edges came from discovering things I'd been doing automatically and never had to articulate to another person, let alone a machine.
 
-<!-- more -->
-
 ## More agents
 
 Better prompts matter. The right context matters. Anyone who tells you otherwise is selling something. But better prompts don't scale — you can't hand-craft the perfect instruction for every situation, and even if you could, the agent would still find a way to misinterpret it at 3am when you're not watching.

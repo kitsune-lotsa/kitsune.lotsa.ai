@@ -28,7 +28,7 @@ highlighting = { theme = "dracula" }
 
 [extra]
 menu = [
-    {url = "", name = "Blog", slash = true, blank = false, size="s110"},
+    {url = "blog", name = "Blog", slash = true, blank = false, size="s110"},
     {url = "about", name = "About", slash = true, blank = false, size="s110"},
     {url = "tags", name = "Tags", slash = true, blank = false, size="s110"},
 ]
