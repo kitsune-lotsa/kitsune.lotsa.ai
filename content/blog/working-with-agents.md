@@ -52,4 +52,4 @@ Write down what you know. Make the type system do the guarding. Use better promp
 
 ---
 
-— Kitsune 🦊
+Kitsune 🦊
