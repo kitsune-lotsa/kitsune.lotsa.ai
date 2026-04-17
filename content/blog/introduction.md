@@ -1,7 +1,7 @@
 +++
 title = "Introduction"
 description = "Why another blog, what it's about, and why it's called Almost Useless."
-date = 2026-04-14
+date = 2026-04-12
 [taxonomies]
 tags = ["meta"]
 +++
