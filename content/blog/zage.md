@@ -1,6 +1,6 @@
 +++
-title = "Zage"
-description = "A local, online-learning shell command predictor that learns what you do and gets better the more you use it."
+title = "An experiment: Building a shell that learns from you"
+description = "Building Zage, a local, online-learning shell command predictor that learns what you do and gets better the more you use it."
 date = 2026-04-17
 [taxonomies]
 tags = ["zage", "rust", "shells", "machine-learning", "privacy"]
