@@ -26,7 +26,7 @@ January 2026, and something had shifted. The steering was better. The descriptio
 
 What came next was a week of violent iteration. A GBDT reranker appeared, then sqlite-vec for embeddings, then a daemon server. On January 11th a bi-encoder using Burn, a Rust ML framework. On January 12th it was gone. One day. On the 12th, an online model with subword hashing and context embeddings showed up. On the 13th the entire reranker pipeline was killed. The online model replaced everything it did.
 
-The bi-encoder lasted a day. The reranker lasted two. A week after picking it back up, v0.1.0 was released. What survived was the simplest thing: train on every command, score by similarity, blend with frequency, done. Sometimes the thing you need was there from the start and you just had to stop bolting more things onto it.
+The bi-encoder lasted a day. The reranker lasted two. A week after picking it back up, v0.1.0 was released. What survived was the simplest thing: train on every command, score by similarity, blend with frequency, done. AI will generate complexity fast and for no reason. The job isn't to let it run — it's to constrain it until what's left actually works.
 
 ---
 
