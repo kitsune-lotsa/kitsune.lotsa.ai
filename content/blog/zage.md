@@ -8,11 +8,11 @@ tags = ["zage", "rust", "shells", "machine-learning", "privacy"]
 
 # Zage
 
-I used Warp for a while. Their smart autocomplete worked well — the kind of feature that disappears into your workflow until you try a terminal without it and keep reaching for a key that does nothing. It predicted what I'd type next based on what I'd typed before. Saved keystrokes. Added up.
+I used Warp for a while. Their smart autocomplete worked well — ghost text suggestions that appear as you type, the kind of thing you stop noticing until you switch terminals and find yourself staring at a blank line expecting something to be there. It predicted what I'd type next based on what I'd typed before. Saved keystrokes. Added up.
 
 They weren't doing online learning. The suggestions came from a fixed model that didn't adapt to how I actually worked. That's a reasonable product decision — training models is expensive and doing it on-device is harder than doing it server-side. But it meant the autocomplete was pattern matching against a static distribution of shell commands, not against me. Useful, but capped.
 
-The suggestions also required sending shell history to a third-party endpoint. Command lines accumulate secrets: database URLs, API tokens, SSH targets, internal service names. I don't have a problem with Warp specifically — it's a solid terminal. I just don't like not being in control of what an AI sees, especially when it's someone else's API endpoint.
+The suggestions required sending shell history to a third-party endpoint. Command lines accumulate secrets: database URLs, API tokens, SSH targets, internal service names. Ultimately there was too much AI in Warp without knowing what those third-party endpoints could see. I don't mind AI — I just want to know when I'm being watched by it, and what it sees and sends. The UI wasn't for me either, but that was secondary.
 
 So I got curious whether I could build it myself.
 
