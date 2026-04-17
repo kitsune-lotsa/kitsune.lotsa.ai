@@ -78,10 +78,10 @@ stylesheets = ["abridge.css"]
 
 webmanifest = "manifest.min.json"
 
-pwa = false
-pwa_VER = '1.0.0'
-pwa_NORM_TTL = 0
-pwa_LONG_TTL = 0
+pwa = true
+pwa_VER = '1.0.1'
+pwa_NORM_TTL = 3600
+pwa_LONG_TTL = 86400
 pwa_TTL_NORM = '"sw.min.js", "sw_load.min.js"'
 pwa_TTL_LONG = '"jpg", "jpeg", "png", "gif", "webp", "avif", "ico", "svg", "xsl", "txt"'
 pwa_TTL_EXEMPT = '"js", "css", "otf", "eot", "ttf", "woff", "woff2", "mp4", "webm", "mp3", "ogg"'
