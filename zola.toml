@@ -85,7 +85,7 @@ pwa_LONG_TTL = 86400
 pwa_TTL_NORM = '"sw.min.js", "sw_load.min.js"'
 pwa_TTL_LONG = '"jpg", "jpeg", "png", "gif", "webp", "avif", "ico", "svg", "xsl", "txt"'
 pwa_TTL_EXEMPT = '"js", "css", "otf", "eot", "ttf", "woff", "woff2", "mp4", "webm", "mp3", "ogg"'
-pwa_cache_all = true
+pwa_cache_all = false
 pwa_BASE_CACHE_FILES = "'/js/theme.min.js','/js/theme_light.min.js','/abridge.css','/js/abridge.min.js','/','/404.html','/offline/','/manifest.min.json'"
 pwa_IGNORE_FILES = ["_headers","sw.min.js","sw.js"]
 
