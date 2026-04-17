@@ -2,6 +2,7 @@
 title = "Working with AI Coding Agents"
 description = "The rocky road of learning to work with coding agents, and the strategies that actually keep them honest."
 date = 2026-04-14
+weight = 2
 [taxonomies]
 tags = ["ai", "coding-agents"]
 +++
