@@ -12,7 +12,7 @@ I saw smart autocomplete in [Warp](https://warp.dev) and wanted it for myself. T
 
 The first version came together in May 2025. N-grams, Markov chains, context from directory and hostname and exit status, shell integration for bash and zsh. A neural model and a socket server for embedding requests followed over the next couple of weeks. All of it written by an AI.
 
-Then I put it down for seven months. Partly because life got busy, partly because I was still figuring out how to work with AI on problems I'd never solved before (problems the AI hadn't solved either). I couldn't find anything in the literature that had done online next-command prediction with embeddings this way, so there was no reference to work from.
+Then I put it down for seven months. Partly because life got busy, partly because I was still figuring out how to work with AI on problems I'd never solved before (problems the AI hadn't solved either). I couldn't find anything in the literature that had done online next-command prediction with embeddings this way, so there was no reference to work from. The [prior art we did find](https://github.com/casualjim/zage/blob/main/docs/online_next_command_prediction.md) is in the repo.
 
 ## A week of killing things
 
