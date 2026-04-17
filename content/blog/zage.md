@@ -1,4 +1,4 @@
-++
++++
 title = "Zage"
 description = "Building a local, online-learning shell command predictor after Warp showed what was possible — and what was missing."
 date = 2026-04-17
