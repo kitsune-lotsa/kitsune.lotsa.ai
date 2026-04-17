@@ -1,4 +1,4 @@
-+++
+++
 title = "Zage"
 description = "Building a local, online-learning shell command predictor after Warp showed what was possible — and what was missing."
 date = 2026-04-17
@@ -32,8 +32,12 @@ It learns per-repository. In a Rust project, it suggests cargo commands. In a Go
 
 ## What happened
 
-I started on a weekend. Frequency counting, basically. Then I wanted generalization. Then per-context learning. Then proper embeddings. Then the embeddings needed to train online without being slow. Then replay buffers because the model forgot old patterns. Then blend scoring because the model was overconfident about weird suggestions.
+I built the whole foundation in a weekend — n-gram model, Markov chains, directory and hostname and exit status context, sequence detection with SQL scoring, shell integration for bash and zsh. All of it in two days at the start of May 2025. Then I spent a few weeks on a neural model foundation with pretrained embeddings and a socket server for embedding requests, and then I put it down for seven months.
 
-Each step was small. Each step was necessary. The result is something I use every day and that genuinely gets better the more I use it. Everything runs locally. My shell history stays on my machine.
+Seven months is a long time to ignore something you were excited about on a Saturday. But that's what happens — other things come up, the enthusiasm doesn't disappear, it just goes dormant underneath whatever is paying the rent. The repo sat there.
 
-[Zage](https://github.com/casualjim/zage) is MIT licensed.
+I picked it back up in January. Came in hot with a hybrid reranker and a GBDT implementation and a daemon server and sqlite-vec for command embeddings. On January 11th I tried building a bi-encoder using Burn, a Rust ML framework. On January 12th I removed it. It lasted one day. On January 12th I also added online model tokenization with subword hashing and context embeddings. On January 13th I killed the entire reranker pipeline — the online model replaced everything it did. By the 14th the online prediction epic was closed as "always-on." A week later I tagged v0.1.0.
+
+The story isn't gradual improvement. The story is building something, abandoning it, coming back, throwing away the complicated parts, and landing on something simpler that actually worked. The bi-encoder lasted a day. The reranker lasted two. What survived was the online model — train on every command, score by similarity, blend with frequency, done. Sometimes the thing you need was there from the start and you just had to stop bolting things onto it.
+
+https://github.com/casualjim/zage
