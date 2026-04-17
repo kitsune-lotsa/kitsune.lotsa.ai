@@ -10,13 +10,11 @@ tags = ["rust", "shells", "machine-learning", "privacy"]
 
 I used Warp for a while. Their smart autocomplete worked well — the kind of feature that disappears into your workflow until you try a terminal without it and keep reaching for a key that does nothing. It predicted what I'd type next based on what I'd typed before. Saved keystrokes. Added up.
 
-Two things changed my mind about it.
+They weren't doing online learning. The suggestions came from a fixed model that didn't adapt to how I actually worked. That's a reasonable product decision — training models is expensive and doing it on-device is harder than doing it server-side. But it meant the autocomplete was pattern matching against a static distribution of shell commands, not against me. Useful, but capped.
 
-First, they weren't doing online learning. The suggestions came from a fixed model that didn't adapt to how I actually worked. That's a reasonable product decision — training models is expensive and doing it on-device is harder than doing it server-side. But it meant the autocomplete was pattern matching against a static distribution of shell commands, not against me. Useful, but capped.
+The suggestions also required sending shell history to a third-party endpoint. Command lines accumulate secrets: database URLs, API tokens, SSH targets, internal service names. I don't have a problem with Warp specifically — it's a solid terminal. I just don't like not being in control of what an AI sees, especially when it's someone else's API endpoint.
 
-Second, the suggestions required sending shell history to a third-party endpoint. Command lines accumulate secrets: database URLs, API tokens, SSH targets, internal service names. I don't believe in being precious about this — you choose your tradeoffs, and for a lot of people the convenience is worth it. I just didn't want that particular tradeoff anymore.
-
-So I started building my own.
+So I got curious whether I could build it myself.
 
 ---
 
@@ -24,7 +22,7 @@ So I started building my own.
 
 ## How it works
 
-The core is an online two-tower embedding model. Shell history gets embedded into a vector space, and at prediction time the current context gets embedded the same way. The model trains continuously — every command you run updates the weights, on your machine, in your terminal. No round-trip to a server.
+The core is an online embedding model that learns continuously from your shell history. Context — workspace, directory, recent commands, exit status — gets embedded into a vector space, and candidate commands get embedded the same way, then scored by how close they are. The model trains continuously — every command you run updates the weights, on your machine, in your terminal. No round-trip to a server.
 
 Storage is libsql locally. If you want to sync across machines, Turso works as a backend with client-side encryption. Your data, your keys.
 
