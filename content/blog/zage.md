@@ -24,4 +24,4 @@ An embedding model runs locally and trains on every command. Context (working di
 
 Tokens break into subword pieces through hashing, so it generalizes from `git push origin main` to `git push origin feature/xyz` without having seen the second form. A replay buffer prevents catastrophic forgetting, so patterns from old projects don't get steamrolled by whatever you're living in now. An adaptive blend score mixes frequency with model confidence. Storage is [libsql](https://github.com/tursodatabase/libsql) locally, with optional [Turso](https://turso.tech) sync and client-side encryption if you want it across machines.
 
-Twenty-three thousand lines of Rust. [The code is on GitHub](https://github.com/casualjim/zage).
+[The code is on GitHub](https://github.com/casualjim/zage).
