@@ -3,7 +3,7 @@ title = "Zage"
 description = "Building a local, online-learning shell command predictor after Warp showed what was possible — and what was missing."
 date = 2026-04-17
 [taxonomies]
-tags = ["rust", "shells", "machine-learning", "privacy"]
+tags = ["zage", "rust", "shells", "machine-learning", "privacy"]
 +++
 
 # Zage
