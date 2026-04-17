@@ -78,7 +78,7 @@ stylesheets = ["abridge.css"]
 
 webmanifest = "manifest.min.json"
 
-pwa = true
+pwa = false
 pwa_VER = '1.0.0'
 pwa_NORM_TTL = 0
 pwa_LONG_TTL = 0
