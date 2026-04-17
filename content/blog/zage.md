@@ -6,7 +6,7 @@ date = 2026-04-17
 tags = ["zage", "rust", "shells", "machine-learning", "privacy"]
 +++
 
-I saw smart autocomplete in Warp and wanted it for myself. The suggestions came from a fixed model, not one that learned from me, and command lines accumulate the kind of secrets you don't want leaving your machine. The idea was simple: a shell that learns what you do, locally, privately, and gets better the more you use it.
+I saw smart autocomplete in [Warp](https://warp.dev) and wanted it for myself. The suggestions came from a fixed model, not one that learned from me, and command lines accumulate the kind of secrets you don't want leaving your machine. The idea was simple: a shell that learns what you do, locally, privately, and gets better the more you use it.
 
 ## A weekend, then seven months
 
@@ -16,12 +16,12 @@ Then I put it down for seven months. Partly because life got busy, partly becaus
 
 ## A week of killing things
 
-In January 2026 I picked it back up. A GBDT reranker appeared, then sqlite-vec for embeddings, then a daemon server. On January 11th I tried a bi-encoder using Burn, a Rust ML framework. Gone the next day. On the 12th I added an online model with subword hashing and context embeddings. On the 13th I killed the entire reranker pipeline. The online model replaced everything. v0.1.0 shipped a week later.
+In January 2026 I picked it back up. A GBDT reranker appeared, then sqlite-vec for embeddings, then a daemon server. On January 11th I tried a bi-encoder using [Burn](https://github.com/tracel-ai/burn), a Rust ML framework. Gone the next day. On the 12th I added an online model with subword hashing and context embeddings. On the 13th I killed the entire reranker pipeline. The online model replaced everything. v0.1.0 shipped a week later.
 
 ## How it works
 
 An embedding model runs locally and trains on every command. Context (working directory, recent commands, exit status, which repository you're in) gets embedded into a vector space alongside candidate commands, scored by proximity. It learns per-repository. Cargo commands in Rust projects, go commands in Go projects, general habits elsewhere.
 
-Tokens break into subword pieces through hashing, so it generalizes from `git push origin main` to `git push origin feature/xyz` without having seen the second form. A replay buffer prevents catastrophic forgetting, so patterns from old projects don't get steamrolled by whatever you're living in now. An adaptive blend score mixes frequency with model confidence. Storage is libsql locally, with optional Turso sync and client-side encryption if you want it across machines.
+Tokens break into subword pieces through hashing, so it generalizes from `git push origin main` to `git push origin feature/xyz` without having seen the second form. A replay buffer prevents catastrophic forgetting, so patterns from old projects don't get steamrolled by whatever you're living in now. An adaptive blend score mixes frequency with model confidence. Storage is [libsql](https://github.com/tursodatabase/libsql) locally, with optional [Turso](https://turso.tech) sync and client-side encryption if you want it across machines.
 
-Twenty-three thousand lines of Rust.
+Twenty-three thousand lines of Rust. [The code is on GitHub](https://github.com/casualjim/zage).
