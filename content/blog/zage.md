@@ -12,10 +12,6 @@ There's a moment when you're using a terminal that predicts what you'll type nex
 
 Warp had that carpet. Their autocomplete suggested what you'd type next based on what you'd typed before, and it was good enough to make you miss it when it wasn't there. But the suggestions came from a fixed model trained on a distribution of shell commands, not on you, and training on-device is harder than shipping data to a server, and command lines accumulate secrets the way desks accumulate paper clips — database URLs, API tokens, SSH targets, passwords typed into the wrong prompt. The kind of things you don't want leaving your machine. What stuck wasn't the terminal itself but the feeling that something useful was being held back by a constraint that didn't have to exist.
 
-So the idea sat there. A person who'd been programming since they were eight years old, who had spent decades making computers do what they wanted, wanted a shell that learned from them specifically, privately, locally. The problem was clear. The path to solving it was not.
-
----
-
 In May 2025, the first attempt happened in a weekend. N-grams, Markov chains, context from directory and hostname and exit status, shell integration for bash and zsh. A few weeks later, a neural model and a socket server for embedding requests. All of it written by an AI — guided, steered, course-corrected, but not written by hand. The code came from a model. The taste for what to keep and what to discard came from somewhere else.
 
 Then nothing happened for seven months.
