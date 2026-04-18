@@ -1,4 +1,5 @@
 {#- JAVASCRIPT #}
+<script src="/js/sw-cleanup.js"></script>
   {%- set integrity = config.extra.integrity | default(value=true) -%}
   {%- if config.extra.search_library %}{%- if config.extra.search_library == "offline" %}{% set integrity = false %}{% endif %}{% endif %}
   {%- set search_library=config.extra.search_library | default(value="elasticlunr") -%}
