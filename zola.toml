@@ -27,9 +27,6 @@ external_links_target_blank = true
 highlighting = { theme = "dracula" }
 
 [extra]
-[extra.comments]
-hyvor = "15309"
-
 menu = [
     {url = "blog", name = "Articles", slash = true, blank = false, size="s110"},
     {url = "about", name = "About", slash = true, blank = false, size="s110"},
@@ -100,3 +97,5 @@ favicon_svg = "favicon.svg"
 favicon180 = "apple-touch-icon.png"
 favicon32 = "favicon-32x32.png"
 favicon16 = "favicon-16x16.png"
+
+comment_system = "giscus"
